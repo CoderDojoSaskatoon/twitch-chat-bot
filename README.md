@@ -1,4 +1,4 @@
-# CoderDojoTO Twitch Chat-bot
+# Twitch Chat-bot
 
 ## Resources
 
