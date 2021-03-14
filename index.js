@@ -29,6 +29,7 @@ client.on("message", (channel, tags, message, self) => {
   }
 });
 
+const adminUserId = "606268847"; // ID for coderdojosaskatoon profile
 let pollLink;
 let projectLink;
 
@@ -72,7 +73,7 @@ const diceCommand = (channel, tags) => {
 };
 
 const pollCommand = (channel, tags, message) => {
-  if (tags.username === "coderdojoto") {
+  if (tags["user-id"] === adminUserId) {
     pollLink = message.split(" ")[1];
 
     client.say(channel, `Poll link has been set to ${pollLink}`);
@@ -84,7 +85,7 @@ const pollCommand = (channel, tags, message) => {
 };
 
 const projectCommand = (channel, tags, message) => {
-  if (tags.username === "coderdojoto") {
+  if (tags["user-id"] === adminUserId) {
     projectLink = message.split(" ")[1];
 
     client.say(channel, `Project link has been set to ${projectLink}`);
